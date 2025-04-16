@@ -1,12 +1,35 @@
+@use '../abstract/variables' as v;
 body {
+	// mobile
+	padding: .7rem;
+	// 
+	display: grid;
+	place-content: center;
 	min-height: 100dvh;
 	hyphens: manual;
 	font-smooth: always;
+	font-family: v.$karla-rg;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: v.$green-200-lighter;
+}
+
+h1 {
+	font-size: 2em;
 }
 
 h1,
+h2 {
+	font-family: v.$karla-bd;
+}
+
+label,
+h1,
+h2 {
+	font-family: v.$karla-bd;
+	color: v.$grey-900-darker;
+}
+
 p,
 span,
 strong {
