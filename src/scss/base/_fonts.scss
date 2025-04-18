@@ -1,8 +1,9 @@
 @use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
 body {
-	// mobile
-	padding: .7rem;
-	// 
+	@include mx.mobile(v.$mobile) {
+		padding: 0.7rem;
+	}
 	display: grid;
 	place-content: center;
 	min-height: 100dvh;
@@ -18,24 +19,24 @@ h1 {
 	font-size: 2em;
 }
 
-h1,
-h2 {
-	font-family: v.$karla-bd;
-}
-
 label,
-h1,
-h2 {
+h1 {
 	font-family: v.$karla-bd;
 	color: v.$grey-900-darker;
 }
 
-p,
-span,
-strong {
-	font-size: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	text-decoration: none;
-	color: inherit;
+h2 {
+	color: v.$white;
+	font-size: 1.2em;
+}
+span {
+	color: v.$white;
+}
+
+input {
+	font-size: 1.13em;
+}
+
+p {
+	color: v.$white;
 }
